@@ -25,3 +25,6 @@ button:hover {
 button:active {
   background-color: rgb(136, 136, 136);
 }
+#clear {
+  width: 138px;
+}

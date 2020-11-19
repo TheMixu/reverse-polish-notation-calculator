@@ -6,7 +6,7 @@ function enter(){
   document.getElementById('output').textContent = '';
   let string = '';
   for(let i = 0; i < stack.length; i += 1) {
-    string += `${stack[i]  } `;
+    string += `${stack[i]} `;
   }
   document.getElementById('stack').textContent = string;
   currentNum = '';
@@ -44,7 +44,7 @@ function calculate (operand) {
   stack.push(parseFloat(result));
   let string = '';
   for(let i = 0; i < stack.length; i += 1) {
-    string += `${stack[i]  } `;
+    string += `${stack[i]} `;
   }
   document.getElementById('stack').textContent = string;
 }
@@ -60,9 +60,9 @@ function clear(full){
   currentNum = '';
 }
 
-document.getElementById('r1-1').addEventListener('click', () => clear(false));
-document.getElementById('r1-3').addEventListener('click', () => clear(true));
-document.getElementById("r5-4").addEventListener('click', enter);
+document.getElementById('clear').addEventListener('click', () => clear(false));
+document.getElementById('clear-all').addEventListener('click', () => clear(true));
+document.getElementById("enter").addEventListener('click', enter);
 window.addEventListener('keydown', (event)=> {
   if (event.defaultPrevented) {
     return; // Do nothing if event already handled
@@ -113,6 +113,9 @@ window.addEventListener('keydown', (event)=> {
       break;
     case "*":
       calculate('*');
+      break;
+    case ".":
+      pushNumber('.');
       break;
     case "Backspace":
       clear(false);
