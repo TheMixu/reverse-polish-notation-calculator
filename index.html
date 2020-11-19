@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reverse Polish Notation Calculator</title>
+  <link rel="stylesheet" href="styles.css"> </link>
+</head>
+<body>
+  <p id="stack" class="display"></p>
+  <p id="output" class="display"></p>
+<div class="first-row">
+  <button id="r1-1" style="width: 138px;" >C</button>
+   <button id="r1-3" >CE</button>
+   <button id="r1-4" onclick="calculate('/')">/</button>
+</div>
+<div class="second-row">
+   <button id="r2-1" onclick="pushNumber('7')">7</button>
+   <button id="r2-2" onclick="pushNumber('8')">8</button>
+   <button id="r2-3" onclick="pushNumber('9')">9</button>
+   <button id="r2-4" onclick="calculate('*')">*</button>
+</div>
+<div class="third-row">
+   <button id="r3-1" onclick="pushNumber('4')">4</button>
+   <button id="r3-2" onclick="pushNumber('5')">5</button>
+   <button id="r3-3" onclick="pushNumber('6')">6</button>
+   <button id="r3-4" onclick="calculate('-')">-</button>
+</div>
+<div class="fourth-row">
+   <button id="r4-1" onclick="pushNumber('1')">1</button>
+   <button id="r4-2" onclick="pushNumber('2')">2</button>
+   <button id="r4-3" onclick="pushNumber('3')">3</button>
+   <button id="r4-4" onclick="calculate('+')">+</button>
+</div>
+<div class="fifth-row">
+  <button id="r5-1" >+/-</button>
+  <button id="r5-2" onclick="pushNumber('0')">0</button>
+  <button id="r5-3" onclick="pushNumber('.')">.</button>
+  <button id="r5-4" >Enter</button>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>
