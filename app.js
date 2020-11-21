@@ -2,7 +2,7 @@ const stack = [];
 let currentNum = '';
 
 function enter(){
-  stack.push(currentNum);
+  stack.push(parseFloat(currentNum));
   document.getElementById('output').textContent = '';
   let string = '';
   for(let i = 0; i < stack.length; i += 1) {
@@ -52,7 +52,7 @@ function calculate (operand) {
 function clear(full){
   if(full){
     document.getElementById('stack').textContent = '';
-    for (let i = 0; i < stack.length; i += 1) {
+    while(stack.length !== 0) {
       stack.pop();
     }
   }
@@ -126,4 +126,4 @@ window.addEventListener('keydown', (event)=> {
   // Consume the event so it doesn't get handled twice
   event.preventDefault();
 }, true);
-document.getElementById("r5-1").addEventListener('click', turn);
+document.getElementById("turn").addEventListener('click', turn);
